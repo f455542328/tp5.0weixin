@@ -24,7 +24,7 @@ class Theme
     {
         (new IDCollection())->goCheck();
         $res = ThemeModel::getThemeListByIDs($ids);
-        if (!$res) {
+        if ($res->isEmpty()) {
             throw new ThemeException();
         };
         return $res;
@@ -38,7 +38,7 @@ class Theme
     {
         (new IDMustBePositiveInt())->goCheck();
         $theme = ThemeModel::getThemeWithProducts($id);
-        if (!$theme) {
+        if ($theme->isEmpty()) {
             throw new ThemeException();
         };
         return $theme;

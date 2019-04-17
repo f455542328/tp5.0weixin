@@ -7,5 +7,6 @@
  */
 //自定义配置文件
 return [
-    'img_prefix' => 'http://z.cn/images'
+    'img_prefix' => 'http://z.cn/images',
+    'token_expire_in' => '7200'
 ];
