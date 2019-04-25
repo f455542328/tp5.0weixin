@@ -8,14 +8,14 @@
 
 namespace app\api\controller\v1;
 
-use app\api\model\Category as CategoryModle;
+use app\api\model\Category as CategoryModel;
 use app\lib\exception\CategoryException;
 
 class Category
 {
     public function getAllCategories()
     {
-        $res = CategoryModle::getAllCategories();
+        $res = CategoryModel::getAllCategories();
 
         if ($res->isEmpty()) {
             throw new CategoryException();
